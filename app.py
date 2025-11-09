@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
-
+import os
 app = Flask(__name__)
 app.secret_key = "safari_secret_key"
 
@@ -109,5 +109,6 @@ def success():
       message = request.form.get('message')
       flash('thank you for contacting us we will reply you soon', 'success')
    return render_template('success.html', name=name, email=email)
+port =int(os.environ.get("PORT",5000))
 if __name__ == "__main__":
-    app.run(host='0.0.0.0',debug=True)
+    app.run(host='0.0.0.0',debug=True, port=port)
