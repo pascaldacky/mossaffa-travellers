@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="text-center">
+  <h3>Booking Confirmation</h3>
+  <p>Your booking for <strong>{{ pkg.name }}</strong> is received.</p>
+  <p>Status: <span class="text-warning">Pending Confirmation</span></p>
+  <a href="/" class="btn btn-outline-dark mt-3">Return Home</a>
+</div>
+{% endblock %}

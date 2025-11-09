@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="text-center">
+  <h2 class="bg-success text-center" >{{ pkg.name }}</h2>
+  <img src="{{ pkg.image }}" class="img-fluid rounded mb-3" alt="{{ pkg.name }}" style="border:blue;">
+  <p>{{ pkg.description }}</p>
+  <a href="{{ pkg.map }}" target="_blank" class="btn btn-info mb-3">View on Map</a><br>
+  <a href="{{ url_for('book', pkg_id=pkg.id) }}" class="btn btn-success">Book Now</a>
+</div>
+{% endblock %}

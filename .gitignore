@@ -1,0 +1,9 @@
+*.mp4
+*.avi
+*.pyc
+__pycache__/
+instance/
+.env
+*.mp4
+*.sqlite3
+*.db

@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<!-- Hero Carousel -->
+<div id="safariCarousel" class="carousel" data-bs-ride="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active ">
+     <div class="carousel-item active">
+
+  <iframe width="100%" height="400" 
+    src="https://www.youtube.com/embed/DqmiZlhuAYg?si=fmu6zw-hBqGVQ8wZautoplay=1&mute=1" 
+    title="YouTube video" frameborder="0" 
+    allow=" clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+
+</div>
+
+            <div class="carousel-caption">
+         <h5>Experience the Wild In Motion</h5>
+        </div>
+      <div class="carousel-caption bg-dark bg-opacity-50 rounded">
+        <strong><em><h5>Welcome to Moffassa Travellers</h5></em></strong>
+        <p>Explore Tanzania’s top wildlife destinations</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSyQ5_Bbk3jjqOeiG48aaF3qHIzQ4X66iD80H29sIPhsz14HU3FZyKH7x3yq6p8EEGYcS3J-Dt2z1ECTqtvqTkaX1KRlq_k9FDXYuH1GdrZc_W-XsEANw0fq1EPTdZnZAvrajVEr=s680-w680-h510" class="d-block w-100" alt="Ngorongoro">
+      <div class="carousel-caption bg-dark bg-opacity-50 rounded">
+        <h2>Ngorongoro Conservation Area</h2>
+        <p>Experience the wonder of the crater</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.nationalgeographic.com/content/dam/expeditions/destinations/africa/journeys/Tanzania-Safari-Experience/tanzania-safari-experience-lead-lion-cubs.jpg" class="d-block w-100" alt="Serengeti">
+
+      <div class="carousel-caption bg-dark bg-opacity-50 rounded">
+        <h2>Tarangire National Park</h2>
+        <p>Discover majestic elephants and baobabs</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Package Section -->
+<h2 class="text-center mt-5 mb-4">Popular Packages</h2>
+<div class="row">
+  {% for p in packages %}
+  <div class="col-md-4 mb-4">
+    <div class="card h-100 shadow-sm">
+      <img src="{{ p.image }}" class="card-img-top" alt="{{ p.name }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ p.name }}</h5>
+        <p class="card-text">{{ p.description }}</p>
+        <a href="{{ url_for('package_detail', pkg_id=p.id) }}" class="btn btn-outline-success">View Package</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

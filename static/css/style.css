@@ -1,0 +1,24 @@
+.hero {
+  height: 60vh;
+  background: url('https://images.unsplash.com/photo-1551918120-9739cb430c6e') center/cover no-repeat;
+}
+
+.card img {
+  transition: transform 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.05);
+}
+.carousel-item img {
+  height: 70vh;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  bottom: 60px;
+}
+
+.whatsapp-float i {
+  font-size: 32px;
+}
